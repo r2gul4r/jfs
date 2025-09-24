@@ -1,0 +1,23 @@
+점심뭐먹지
+
+1.vscode 제거
+2.VScode 기본 설치
+3.확장 프로그램
+    - 한국어 팩: kor
+    - (필수) Live server: Live
+    - 테마: one dark pro
+    - power mode
+    - (추천)VScode-icons: 가독성
+        -> 기본값 seti >> VScode icons
+
+
+내 컴 > 로컬D > 폴더
+클라이언트(Client) 컴퓨터
+서버(Server) 컴퓨터 -> github(깃허브) > jfs폴더 > readme.md
+
+git(깃)
+    -> 자료를 깃허브에 업로드/다운로드
+github(깃허브): 저장소(레퍼지토리)
+    https://github.com/
+    -> 파일/폴더 저장공간 확보
+    
