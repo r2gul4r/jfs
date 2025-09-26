@@ -48,6 +48,7 @@
                     예)style
             
             ->속성값은 관례상 ""안에 쓴다.
+
         
         태그에 따라 필수 속성이 있을 수도 있고, 없을 수 도 있다.
         속성이 여러 개일 경우 한 칸 이상의 공백으로 구분한다.
@@ -55,9 +56,21 @@
     
         CSS(Cascading Style Sheet)
             -> 디자인: color, width, border, layout 등등
+    
+            -->
 
+        <!-- 
+            ./      현재 폴더 위치
+            ../     현재 폴더에서 한 단계 상위(부모) 폴더로 이동
+                예) ../../../   세 번 탈출    
 
-    -->
+            -->
+        <!-- 다중선택: ctrl+d
+                -> 선택한 같은 단어를 동시 선택
+             다중 커서: alt+클릭
+                
+        -->
+
 
     <!-- 시작태그, contents, 끝태그 -->
     <!-- 빈태그: 종료(끝) 태그가 없는 태그도 있다. -->
@@ -102,37 +115,59 @@
 
      -->
 
-    <img src="figma.svg" alt="피그마로고"
+        <!-- 이미지 -->
+
+    <img src="../assets/images/figma.svg" alt="피그마 로고"
         style="border: 1px solid blue; transform: rotate(45deg);"><!-- 가로배치=인라인(하나의 라인안에 들어감)-->
-    <img src="figmaLOGO.png" alt="피그마투명로고" width="67">
+    <img src="../assets/images/figmaLOGO.png" alt="피그마 투명 로고" width="67">
 
     <!-- 인라인 스타일 -->
     <img src="https://kyf.or.kr/utl/web/imageSrc.do?path=20220725&physical=FE0766CA00A847BE9719D8EF205586EC&contentType=image/jpeg"
         alt="인스타그램 아이콘" style="width:100px;"><!-- style=(html)"안에는CSS" -->
 
+
+        <!-- 비디오 -->
+
     <!-- 유튜브 링크 걸기 -->
     <!-- width="1250" height="703" -->
     <iframe src="https://www.youtube.com/embed/aPDFhFbmzBo" title="Genesis Magma Program l 제네시스" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 320px; height: 180px;"></iframe>
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="width: 400px; height: 300px;"></iframe>
 
 
     <!-- HTML 요소는 부모/자식 관계가 있다. -->
     <!-- img > jpg, png, svg 등 -->
     <!-- video > mp4, webm 등 -->
-    <video width="320" height="240" controls>
-        <source src="mov_bbb.mp4" type="video/mp4">
-        <source sec="movie.webm" type="video/webm">
+
+    <video controls poster="../assets/images/mov_bbb.png" style="width: 400px; height: 300px;">
+        <source src="../assets/video/mov_bbb.mp4" type="video/mp4">
+        <source src="../assets/video/mov_bbb.webm" type="video/webm">
         Your browser does not support the video tag.
     </video>
+
+<!-- 오디오 -->
+
+    <audio controls><!-- 홈피 BGM 스크립트 쓰자 -->
+        <source src="../assets/video/horse.ogv" type="audio/ogg">
+        <source src="../assets/video/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio src="../assets/audio/Christmas_Village-Aaron_Kenny.mp3" autoplay loop></audio>
 
     <!-- 빈 요소: <img>, <br>, <hr> -->
     <hr style="border: 5px solid rebeccapurple;">
     <!-- 단위: px(픽셀), %, vw, vh, ... -->
-    <!-- autoplay + muted -->
-    <!-- 무한 반복: loop -->
-    <!-- 영상 조절 바: controls -->
-    <video src="main_video1.mp4" autoplay muted loop style="width: 100%; height: 100vh; object-fit: cover; "></video>
+    <!-- 
+            autoplay: 자동 실행
+            muted: 음소거
+            loop: 무한 반복
+            controls: 비디오 플레이어
+            poster: 영상 썸네일
+    -->
+    <video src="../assets/video/main_video1.mp4" autoplay muted loop style="width: 100%; height: 100vh; object-fit: cover; "></video>
+
+    
 
 </body>
 
