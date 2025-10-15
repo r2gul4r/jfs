@@ -68,6 +68,21 @@ body {
         line-height: 줄간격;
         font-weight: bold;
 */
+/* section */
+/* section common(공통) */
+.sec {
+    /* vh: viewport height */
+    height: 100vh;
+
+}
+
+
+#sec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
 .card-container {
     width: 340px;
