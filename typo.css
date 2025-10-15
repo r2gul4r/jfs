@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/* https://cdnjs.com */
+/* font awesome 소스코드 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css'); /* @i */
+/* 1. 웹(외부)폰트를 CDN으로 연결 */
+/* 눈누 */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+/* 구글 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+/* 
+구글 폰트
+https://fonts.google.com/
+눈누 폰트
+https://noonnu.cc/
+
+*/
+
+/* section1 area */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+}
+
+#sec1 h2 {
+    font-size: 60px;
+}
+
+#sec1 p {
+    font-size: 24px;
+}
+
+#sec1 span:first-of-type {
+    font-size: 40px;
+}   
+
+#sec1 span:last-of-type {
+    font-size: 17px;
+}
+
+#sec1 .counter div {
+    /* 색상은 16진수 영문 대소문자 구분x */
+    color: #3e3a38;
+}
