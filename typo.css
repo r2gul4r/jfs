@@ -17,13 +17,24 @@ https://fonts.google.com/
 https://noonnu.cc/
 
 */
+:root {
+    /* css의 변수 정의: css변수는 :root에 정의한다 */
+    /* :root 선택자는 html태그를 선택한다. */
+    --main-color: #7a4545;
+    --sub-color: #3e3a38;
+    --white-color: #fff
+}
 
+body {
+    /* font: 크기/줄간격 글꼴1, 글꼴2 */
+    font: 15px/1.6 "Noto Sans KR", sans-serif;
+    color: var(--main-color);
+}
 /* section1 area */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-body {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 16px;
+#sec1 {
+    color: var(--white-color)
 }
 
 #sec1 h2 {
@@ -44,5 +55,26 @@ body {
 
 #sec1 .counter div {
     /* 색상은 16진수 영문 대소문자 구분x */
-    color: #3e3a38;
+    /* 부모 요소(#sec1)에서 지정한 글자색보다 자식 요소에 지정한 속성이 우선 적용된다. */
+    color: var(--sub-color);
+}
+
+/* section2 area */
+
+.card-title {
+    font-size: 22px;
+    color: #333;
+    line-height: 27px;
+}
+
+.card-details p {
+    /* p는 위아래 기본 마진이 있다. 폰트 크기의 1em */
+    margin: 0;
+}
+
+.phone-number {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 24px;/* fz24 */
+    color: #0f2244;
+    font-weight: bold;
 }
