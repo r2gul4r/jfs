@@ -1,42 +1,35 @@
-@charset "utf-8";
+@charset "utf-8"; /* @ch */
 @import url(common.css); /* @i */
-@import url(typo.css); /* @i */
+@import url(typo.css);
 
+.card-details p {
+    /* p는 위아래 기본 마진이 있다. 폰트 크기의 1em */
+    margin: 0;
+}
 
 /* header */
-/* section */   
-/* card-container */
-/* 배경색: bgc */
-/* 
-    typo/color system
-        -큰제목  22 #333
-        -배지    15 #fff
-        -본문    15 #9a8b86, 나눔스퀘어,1.6
-        -연락처  24 #0f2244, noto sans kr
-
-        font-family: 글꼴;
-        line-height: 줄간격;
-        font-weight: bold;
-*/
 /* section */
 /* section common(공통) */
 .sec {
     position: relative;
     /* vh: viewport height */
     height: 100vh;
-
 }
+
 /* section1 area */
 /* #sec1 * {
-    outline: 1px solid lime;
+    outline: 1px solid red;
 } */
-
- #sec1 .vid {
-    position: absolute;
+#sec1 {
+    background-color: lightgreen;
+}
+#sec1 .vid {
+    position: absolute; /* poa */
     width: 100%;
     height: 100%;
-    overflow: hidden;
- }
+    /* 박스 크기를 벋어나는 콘텐츠(비디오) 영역을 숨김 */
+    /* overflow: hidden; */
+}
 #sec1 .outer {
     position: absolute;
     left: 50%;
@@ -44,56 +37,60 @@
     transform: translate(-50%,-50%);
 }
 #sec1 .container {
-    /* 너비가 100%이지만 최대크기는 1330px이다 */
-    width: 100%;/* w100p */
-    max-width: 1330px;/* maw1330 */
-    /* 텍스트(인라인 요소 포함) 가로 정렬 */
-    text-align: center;/* tac */
+    /* 너비가 100% 이지만, 최대 크기가 1330px */
+    width: 100%; /* w100p */
+    max-width: 1330px; /* maw1330 */
+    /* 인라인 요소(텍스트 포함) 가로 정렬 */
+    text-align: center; /* tac */
 }
 #sec1 .container p {
-    margin: 36px 0 96px
+    margin: 20px 0 100px; /* m40-0-120 */
 }
-
 #sec1 .counter {
-    display: flex;/* df */
+    display: flex; /* df */
     justify-content: center;
 }
 #sec1 .counter div {
     width: 307px;
-    /* height와 line-height가 같으면 인라인 요소가 수직 중앙 배치된다. 단, 한 줄 텍스트일때만 가능 */
+    /* height와 line-height가 같으면 텍스트가 수직 중앙 배치된다. 단, 한 줄 텍스트일때만 가능 */
     height: 44px;
-    line-height: 44px;/* lh44px */
+    line-height: 44px; /* lh44px */
     background-color: rgba(255, 217, 0, .6);
-    border-radius: 20px; /* bdrs20 */
+    border-radius: 20px; /* bdrr */
     margin: 10px;
 }
 
 /* section2 area */
-#sec2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.sec2con {
+#sec2 .bg-percel {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#sec2 .card-list {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex; /* df */
+    gap: 20px; /* g20 */
 }
 
+/* card-container */
+/* 배경색: bgc */
 .card-container {
     width: 340px;
-    background-color: #F0EEED;
+    background-color: #EDF5F7;
     /* overflow: hidden; */
+    /* margin: 20px; */
 }
 
-.card-image-wrapper:hover {
-    overflow: hidden;   /* o */
+.card-image-wrapper {
+    overflow: hidden; /* o */
 }
 .card-image-wrapper img {
     transition: 0.3s; /* trs, 0.3초 */
 }
-
 .card-image-wrapper:hover img {
     /* transform: scale(너비, 높이), 기본값 1 */
     transform: scale(1.2, 1.2); /* trf:s */
@@ -102,24 +99,22 @@
 .card-content {
     /* 마진 겹침 해결!
         -> 마진이 부모 바깥으로 지정되는 것을 방지
-    */
+     */
     display: flow-root;
 }
 
-/* 뱃지, 좋아요 */
+/* 배지+좋아요 */
 .card-header {
-    /* 상, 좌우, 하 */
     padding-left: 45px; /* pl45 */
 }
 
 .card-header span {
     /* 인라인 요소를 위로 맞춤 */
     vertical-align: top; /* vat */
-    
 }
 
 .tag-badge {
-    display: inline-block;
+    display: inline-block; /* dib */
     width: 70px; /* w70 */
     height: 38px; /* h38 */
     line-height: 38px; /* lh38px */
@@ -134,16 +129,16 @@
     display: inline-block; /* dib */
     width: 55px; /* w55 */
     height: 55px; /* h55 */
-    line-height: 60px; /* 줄간격, lh55px */
-    text-align: center; /* 텍스트 좌우 정렬, tac */ 
-    /* padding: 17px 15px 24px; */
-    border-radius: 50%;  /* bdrs50p */
+    line-height: 55px; /* 줄간격, lh55px */
+    text-align: center; /* 텍스트 좌우 정렬, tac */
+    /* padding: 16px 15px 24px; */
+    border-radius: 50%; /* bdrs50p */
     margin-top: 20px;
     margin-left: 145px;
     background-color: #B1B4B3; /* bgc */
 }
 .like-button i {
-    color: #fff; /* 글자색, c */
+    color: #fff; /* 글자 색, c */
     font-size: 20px; /* 글자 크기, fz20 */
 }
 
@@ -151,5 +146,6 @@
 .card-body {
     margin: 0 45px 120px; /* m0-45-120 */
 }
+
 
 /* footer */
